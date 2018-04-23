@@ -1,17 +1,17 @@
 const 	express = require('express'),
-		passport = require('../config/passportConfig')
-		router = express.Router();
+		passport = require('../config/passportConfig'),
+		authRoute = express.Router();
 
 const User = require('../models/user');
 
 //render the page with the login form
-router.get('/login', function(req, res){
+authRoute.get('/login', function(req, res){
 	res.render('auth/login')
 });
 
 //handle log in functionality
 
-router.post('/login', passport.authenticate('local', {
+authRoute.post('/login', passport.authenticate('local', {
 	successRedirect: '/profile',
 	successFlash: 'Good work, you logged in',
 	failureRedirect: '/auth/login',
@@ -19,12 +19,12 @@ router.post('/login', passport.authenticate('local', {
 }));
 
 //render the page with the signup form
-router.get('/signup', function(req, res){
+authRoute.get('/signup', function(req, res){
 	res.render('auth/signup')
 });
 
 //signup functionality
-router.post('/signup', function(req, res, next){
+authRoute.post('/signup', function(req, res, next){
 	console.log('info from form', req.body);
 	//first, try to find their email (in case it already exists)
 	User.findOne({email:req.body.email}, function(err, user){
@@ -34,7 +34,7 @@ router.post('/signup', function(req, res, next){
 			res.redirect('/auth/signup')
 		} else if(user){
 			//don't want to let them sign up multiple times with same email
-			req.flash('error', 'You already exist');
+			req.flash('error', 'Login already exists');
 			res.redirect('/auth/login');
 		} else{
 			//user did everything right - they are actually a new user signing up
@@ -43,7 +43,7 @@ router.post('/signup', function(req, res, next){
 					req.flash('error', 'nooo why');
 					return console.log('err', err);
 				}
-				console.log('yay you signed up now');
+				console.log('Success! Signed up now');
 				passport.authenticate('local', 
 				{
 					successRedirect: '/profile',
@@ -58,11 +58,11 @@ router.post('/signup', function(req, res, next){
 
 //logout route removes user data from session
 //then it redirects them to the home page
-router.get('/logout', function(req, res){
+authRoute.get('/logout', function(req, res){
 	req.logout();
 	req.flash('success', 'you are logged out. byeeeeeeee');
 	res.redirect('/');
 });
 
 
-module.exports = router;
+module.exports = authRoute;

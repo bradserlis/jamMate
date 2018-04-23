@@ -6,7 +6,8 @@ const 		 express = require('express'),
 			 mongoose = require('mongoose'),
 			 expressLayouts = require('express-ejs-layouts'),
 			 flash = require('connect-flash'),
-			 authRoute = require('./routes/auth'),
+			 authRoute = require('./controllers/auth'),
+			 profileRoute = require('./controllers/profile'),
 			 passport = require('./config/passportConfig'),
 			 session = require('express-session'),
 			 isLoggedIn = require('./middleware/isLoggedIn'),
@@ -15,7 +16,7 @@ const 		 express = require('express'),
 
 //connect to DB
 
-mongoose.connect('mongodb://localhost/authboiler')
+mongoose.connect('mongodb://localhost/jamMate')
 
 //set and use statements
 
@@ -46,15 +47,10 @@ app.get('/', function(req, res){
 	res.render('home');
 });
 
-app.get('/profile', isLoggedIn, function(req, res){
-	res.render('profile');
-});
-
-
-
 //include routes from any controllers/routes
 
-app.use('/auth', authRoute)
+app.use('/auth', authRoute);
+app.use('/profile', profileRoute);
 
 
 //listen
