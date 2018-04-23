@@ -16,13 +16,13 @@ const 		 express = require('express'),
 
 //connect to DB
 
-mongoose.connect('mongodb://localhost/jamMate')
+mongoose.connect('mongodb://localhost/jamMate');
 
 //set and use statements
 
 app.set('view engine', 'ejs');
 // app.set('views', '/')
-app.use(expressLayouts)
+app.use(expressLayouts);
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(session({
 	secret: process.env.SESSION_SECRET,

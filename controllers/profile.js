@@ -7,7 +7,7 @@ const 	mongoose = require('mongoose'),
 const User = require('../models/user');
 
 
-profileRoute.get('/profile', isLoggedIn, function(req, res){
+profileRoute.get('/', isLoggedIn, function(req, res){
 	res.render('profile');
 });
 

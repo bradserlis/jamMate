@@ -1,5 +1,6 @@
 const 	express = require('express'),
 		passport = require('../config/passportConfig'),
+		// profileRoute = require('./profile'),
 		authRoute = express.Router();
 
 const User = require('../models/user');
