@@ -15,7 +15,7 @@ profileRoute.get('/', isLoggedIn, function(req, res){
 });
 
 profileRoute.get('/search', isLoggedIn, function(req, res){
-	request(`https://www.zipcodeapi.com/rest/${process.env.ITS_A_KEY}/radius.json/${currentUser.zipcode}/10/miles?minimal`, function(err, res, body){
+	request(`https://www.zipcodeapi.com/rest/${process.env.ITS_A_KEY}/radius.json/${res.locals.currentUser.zipcode}/10/miles?minimal`, function(err, res, body){
 		if(err){
 			return console.log(err);
 		} 
@@ -23,12 +23,10 @@ profileRoute.get('/search', isLoggedIn, function(req, res){
 		let bodyObj = JSON.parse(body);
 		bodyObj.zip_codes.forEach(function(zip){
 			zip = Number(zip);
-			// console.log(zip)
 			User.find({zipcode: zip}, function(err, match){
 				if(err){
 					return console.log('it broke');
 				} 
-				// console.log(match)
 				match.forEach(function(element){
 				if(element !== []){
 					matchedUsers.push(element);
@@ -36,7 +34,7 @@ profileRoute.get('/search', isLoggedIn, function(req, res){
 				})
 			})
 		})
-		console.log('matchedUsers looks like this:', matchedUsers);
+		// console.log('matchedUsers looks like this:', matchedUsers);
 
 	})
 })
