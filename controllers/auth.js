@@ -48,7 +48,7 @@ authRoute.post('/signup', function(req, res, next){
 				passport.authenticate('local', 
 				{
 					successRedirect: '/profile',
-					successFlash: 'Successful acocunt creation'
+					successFlash: 'Successful account creation'
 				})
 				(req, res, next);
 			});
