@@ -14,8 +14,11 @@ $('#updateForm').on('submit', function(e){
 	e.preventDefault();
 	console.log("well the button is working at least")
 	$.ajax({
-		method: PUT,
-		url:"/profile/edit"
+		method: 'PUT',
+		url:"/profile/edit",
+		data:$(this).serialize(),
+		success: console.log('this would send'),
+		error: console.log('this would NOT SEND')
 	})
 })
 

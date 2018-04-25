@@ -65,6 +65,14 @@ profileRoute.get('/edit', isLoggedIn, function(req, res){
 //update
 //==
 
+profileRoute.put('/edit', function(req, res){
+	User.findOneAndUpdate({name: res.locals.currentUser.name}, req.body, function(err, result){
+		if(err){
+		return console.log(err);
+		} console.log(result);
+	})
+})
+
 //==
 //destroy
 //==
