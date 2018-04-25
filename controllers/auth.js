@@ -26,6 +26,7 @@ authRoute.get('/signup', function(req, res){
 
 //signup functionality
 authRoute.post('/signup', function(req, res, next){
+	
 	console.log('info from form', req.body);
 	//first, try to find their email (in case it already exists)
 	User.findOne({email:req.body.email}, function(err, user){

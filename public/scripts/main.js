@@ -17,11 +17,18 @@ $('#updateForm').on('submit', function(e){
 		method: 'PUT',
 		url:"/profile/edit",
 		data:$(this).serialize(),
-		success: console.log('this would send'),
-		error: console.log('this would NOT SEND')
+		success: updateSuccess,
+		error: updateFail
 	})
 })
 
+function updateSuccess(json){
+	console.log(json, 'this would send')
+}
+
+function updateFail(){
+	console.log('this did not send...')
+}
 // function clickedThing(){
 // 	console.log("GAAAAH!")
 // }

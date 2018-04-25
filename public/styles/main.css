@@ -1,3 +1,15 @@
+/*font-family: 'Oxygen', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Open Sans Condensed', sans-serif;*/
+
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1{
+	font-family: 'Amatic SC', cursive;
+}
+
 h2{
 	color:red;
 	text-align: center;
@@ -5,4 +17,8 @@ h2{
 
 p{
 	text-align: center;
+}
+
+div: nth-child(2n){
+	background: #4c8fd2;
 }
