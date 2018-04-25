@@ -37,6 +37,8 @@ profileRoute.get('/search', isLoggedIn, function(req, res){
 		// console.log('matchedUsers looks like this:', matchedUsers);
 
 	})
+		res.render('search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser})
+		matchedUsers=[];
 })
 
 	// for each of the array of zipcodes, do user.find, match user zipcode to the current item of the foreach loop

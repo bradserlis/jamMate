@@ -1,5 +1,28 @@
-<h2><%= currentUser.name %></h2>
 
-<p><%= currentUser.zipcode%></p>
+<h2>You are: <%= currentUser.name %></h2>
 
+<p>Located in: <%= currentUser.zipcode%></p>
+<hr>
+<hr>
 
+<div class=jumbotron>
+<% matchedUsers.forEach(function(val){ %>
+	<h2>Username:<%= val.name %> </h2>
+	<ul>Instruments:
+		<%val.instruments.forEach(function(item){ %>
+		<li><%= item %></li>
+		<% }) %>
+	</ul>
+	<hr>
+	<ul> Genres I am Interested in:
+	<%val.genresToPlay.forEach(function(item){ %>
+		<li><%= item %></li>
+		<% }) %>
+	</ul>
+	<hr>
+	<p>Location:<%= val.zipcode %> </p>
+	<br>
+	<br>
+<% }) %> 
+	
+</div>

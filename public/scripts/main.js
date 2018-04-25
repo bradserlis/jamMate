@@ -20,12 +20,12 @@
 // $(document).ready(function() {
 //  console.log('something');
 //  $('#searchUsersButton').click(function(){
-// 	$.ajax({
-// 		method:"GET",
-// 		url:"https://www.zipcodeapi.com/rest/ITS_A_KEY/radius.json/98052/10/miles?minimal",
-// 		success: console.log('it worked'),
-// 		error: console.log('it did not work')
-// 	})
+	// $.ajax({
+	// 	method:"GET",
+	// 	url:"https://www.zipcodeapi.com/rest/ITS_A_KEY/radius.json/98052/10/miles?minimal",
+	// 	success: console.log('it worked'),
+	// 	error: console.log('it did not work')
+	// })
 // })
 // });
 
