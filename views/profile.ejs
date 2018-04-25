@@ -2,4 +2,22 @@
 
 <h2>Hello, welcome back, <%= currentUser.name %></h2>
 
+<h2>Username:<%= currentUser.name %> </h2>
+	<ul>Instruments:
+		<%currentUser.instruments.forEach(function(item){ %>
+		<li><%= item %></li>
+		<% }) %>
+	</ul>
+	<hr>
+	<ul> Genres I am Interested in:
+	<%currentUser.genresToPlay.forEach(function(item){ %>
+		<li><%= item %></li>
+		<% }) %>
+	</ul>
+	<hr>
+	<p>Location:<%= currentUser.zipcode %> </p>
+	<br>
+	<br> 
+
+
 <p><%=console.log("i hate living in:",currentUser.zipcode)%></p>

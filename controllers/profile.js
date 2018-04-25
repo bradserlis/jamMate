@@ -9,9 +9,8 @@ const 	mongoose = require('mongoose'),
 const User = require('../models/user');
 let matchedUsers = [];
 
-var allZips = [];
 profileRoute.get('/', isLoggedIn, function(req, res){
-	res.render('profile');
+	res.render('profile', {currentUser:res.locals.currentUser});
 });
 
 profileRoute.get('/search', isLoggedIn, function(req, res){
