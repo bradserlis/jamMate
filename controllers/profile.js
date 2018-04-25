@@ -3,19 +3,30 @@ const 	mongoose = require('mongoose'),
 		passport = require('../config/passportConfig'),
 		isLoggedIn = require('../middleware/isLoggedIn'),
 		request = require('request'),
-		profileRoute = express.Router();
+		profileRoute = express.Router(),
+		User = require('../models/user');
+//=====
+//other declared variables
+//=====
 
-
-const User = require('../models/user');
 let matchedUsers = [];
+
+//=====
+//routes
+//=====
+
+//==
+//read
+//==
 
 profileRoute.get('/', isLoggedIn, function(req, res){
 	res.render('profile', {currentUser:res.locals.currentUser});
 });
 
 profileRoute.get('/search', isLoggedIn, function(req, res){
-	request(`https://www.zipcodeapi.com/rest/${process.env.ITS_A_KEY}/radius.json/${res.locals.currentUser.zipcode}/10/miles?minimal`, function(err, res, body){
-		if(err){
+
+	request(`https://www.zipcodeapi.com/rest/${process.env.ITS_A_KEY}/radius.json/${res.locals.currentUser.zipcode}/10/miles?minimal`, function(error, response, body){
+		if(error){
 			return console.log(err);
 		} 
 		//made the json call into an object
@@ -27,44 +38,36 @@ profileRoute.get('/search', isLoggedIn, function(req, res){
 					return console.log('it broke');
 				} 
 				match.forEach(function(element){
-				if(element !== []){
-					matchedUsers.push(element);
-				}
-				})
-			})
-		})
+					if(element !== []){
+						matchedUsers.push(element);
+					}
+				});
+			});
+		});
 		// console.log('matchedUsers looks like this:', matchedUsers);
+		// res.render('search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser})
+		// res.render('search', {matchedUsers: matchedUsers})
+	});
+	res.render('search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser})
+	matchedUsers = [];
+});
 
-	})
-		res.render('search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser})
-		matchedUsers=[];
+
+profileRoute.get('/edit', isLoggedIn, function(req, res){
+	res.render('edit')
 })
 
-	// for each of the array of zipcodes, do user.find, match user zipcode to the current item of the foreach loop
-// if it matches, push to the new user array of objects
-// render that array onto page
+//==
+//create
+//==
 
-// 		//send back all users
-// 		User.find({}, function(err, val){
-// 		//send back only the zipcodes from those users
-// 			val.forEach( (item) =>{
-// 			//store the zipcode for moving to array	
-// 				let currZip = item.zipcode;
-// 			//push the value into the array, and repeat until through all users
-// 				allZips.push(currZip);
-// 			})
-// 		});
-// 		console.log('allzips looks like this:', allZips);
+//==
+//update
+//==
 
-// 		// const matchedZip = bodyObj.zip_codes.filter(function(value){
-// 		// 	allZips.forEach( (zip) => {
-// 		// 		return value == zip;
-// 		// 	});
-// 		})
-// 		console.log(matchedZip);
-// 	})
-// 	res.render('search');
-// })	
+//==
+//destroy
+//==
 
 
 module.exports = profileRoute;

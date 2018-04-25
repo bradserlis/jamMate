@@ -1,0 +1,27 @@
+<h1>Edit Profile</h1>
+<h2><%= currentUser.name %></h2>
+<form action="/profile/edit" class="updateForm">
+<div class="form-group" class="instrumentsUpdate">
+	<label for="instruments">Instruments</label>
+	<br><input type="checkbox" name="instruments" value="Guitar">Guitar
+	<br><input type="checkbox" name="instruments" value="Bass">Bass 
+	<br><input type="checkbox" name="instruments" value="Drums">Drums 
+	<br><input type="checkbox" name="instruments" value="Agressive Vocals">Vocals (Agressive)
+	<br><input type="checkbox" name="instruments" value="Vocals">Vocals
+	<br><input type="checkbox" name="instruments" value="Keys-Synth">Keys/Synth 
+</div>
+<div class="form-group" class="genresUpdate">
+	<label for="genres">Genres I would like to play:</label>
+	<br><input type="checkbox" name="genresToPlay" value="Rock">Rock
+	<br><input type="checkbox" name="genresToPlay" value="Metal">Metal 
+	<br><input type="checkbox" name="genresToPlay" value="Post-Hardcore">Post-Hardcore 
+	<br><input type="checkbox" name="genresToPlay" value="Indie-Rock">Indie Rock
+	<br>
+</div>
+<div class="form-group zipcodeUpdate">
+	<label for="zipcode">Zipcode</label>
+	<input type="number" name="zipcode" maxlength="5">
+</div>
+
+<input type="submit" value="Confirm Changes" class="btn btn-success" form="updateForm">
+</form>

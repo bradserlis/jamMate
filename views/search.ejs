@@ -1,7 +1,7 @@
 
-<h2>You are: <%= currentUser.name %></h2>
+<h2>You are: <%= //currentUser.name %></h2>
 
-<p>Located in: <%= currentUser.zipcode%></p>
+<p>Located in: <%= //currentUser.zipcode%></p>
 <hr>
 <hr>
 
@@ -11,18 +11,18 @@
 	<ul>Instruments:
 		<%val.instruments.forEach(function(item){ %>
 		<li><%= item %></li>
-		<% }) %>
+		<% }); %>
 	</ul>
 	<hr>
 	<ul> Genres I am Interested in:
 	<%val.genresToPlay.forEach(function(item){ %>
 		<li><%= item %></li>
-		<% }) %>
+		<% }); %>
 	</ul>
 	<hr>
 	<p>Location:<%= val.zipcode %> </p>
 	<br>
 	<br>
-<% }) %> 
+<% }); %> 
 	
 </div>
