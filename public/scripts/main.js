@@ -1,4 +1,4 @@
-// console.log('main js connected')
+console.log('main js connected')
 
 //button logic 
 
@@ -8,16 +8,21 @@
 // ==
 //get button by id 
 // ==
+$(document).ready(function() {
 
-// $('#searchUsersButton').click(function(){
-// 	console.log("currentUser")
-// })
+$('#updateForm').on('submit', function(e){
+	e.preventDefault();
+	console.log("well the button is working at least")
+	$.ajax({
+		method: PUT,
+		url:"/profile/edit"
+	})
+})
 
 // function clickedThing(){
 // 	console.log("GAAAAH!")
 // }
 
-// $(document).ready(function() {
 //  console.log('something');
 //  $('#searchUsersButton').click(function(){
 	// $.ajax({
@@ -27,7 +32,7 @@
 	// 	error: console.log('it did not work')
 	// })
 // })
-// });
+});
 
 // ==
 //perform ajax call
