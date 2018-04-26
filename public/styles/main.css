@@ -1,12 +1,10 @@
-/*font-family: 'Oxygen', sans-serif;
+font-family: 'Oxygen', sans-serif;
 font-family: 'Amatic SC', cursive;
 font-family: 'Open Sans Condensed', sans-serif;*/
 
 body{
 	font-family: 'Open Sans Condensed', sans-serif;
-	background-image: url("/rebel.png");
-	color: floralwhite;
-
+	background-image: url("/binding_dark.png");
 }
 
 h1{
@@ -23,7 +21,52 @@ p{
 }
 
 
+.user-card{
+	background: red;
+}
+
+.navbar {
+/*  font-size: 20px;
+*/  background-color: #333;
+  border: 0;
+  border-radius: 0;
+}
+
+.navbar .navbar-brand:hover, .navbar .navbar-brand:focus{
+  color: rgb(77, 180, 199);
+   box-shadow: inset 0 0 1em beige;
+  transition: all .4s;
+  background-color: transparent;
+}
+
+.navbar a{
+  transition: all .4s;
+}
+.navbar a:hover{
+  box-shadow: inset 0 0 1em beige;
+  transition: all .4s;
+  color: #FFF;
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
 
 /*h2:nth-child(2n+1){
 	background: #4c8fd2;
-}*/
+}

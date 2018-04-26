@@ -5,10 +5,9 @@
 <hr>
 <hr>
 
-<div>
+<div class="row">
 <% matchedUsers.forEach(function(val){ %>
-	<div class="entry">
-		
+	<div class="col-md-3 offset-1 user-card">
 		<h2>Username:<%= val.name %> </h2>
 		<ul>Instruments:
 			<%val.instruments.forEach(function(item){ %>
@@ -25,6 +24,6 @@
 		<p>Location:<%= val.zipcode %> </p>
 		<br>
 		<br>
-<% }); %> 
 	</div>
+<% }); %> 
 </div>
