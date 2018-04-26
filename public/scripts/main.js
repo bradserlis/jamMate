@@ -22,8 +22,9 @@ $('#updateForm').on('submit', function(e){
 	})
 })
 
-function updateSuccess(json){
-	console.log(json, 'this would send')
+function updateSuccess(){
+	console.log('this would send')
+	window.location.href="/profile"
 }
 
 function updateFail(){
