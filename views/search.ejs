@@ -7,8 +7,10 @@
 
 <div class="row">
 <% matchedUsers.forEach(function(val){ %>
-	<div class="col-md-3 offset-1 user-card">
-		<h2>Username:<%= val.name %> </h2>
+	<div class="col-md-3 user-card">
+		<div class='card-head'>
+			<h2>Username:<%= val.name %> </h2>	
+		</div>
 		<ul>Instruments:
 			<%val.instruments.forEach(function(item){ %>
 			<li><%= item %></li>

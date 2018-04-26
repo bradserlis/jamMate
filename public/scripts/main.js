@@ -22,6 +22,10 @@ $('#updateForm').on('submit', function(e){
 	})
 })
 
+$(".navbar-toggler").click(function(){
+        $(".collapse").collapse('toggle');
+    });
+
 function updateSuccess(){
 	console.log('this would send')
 	window.location.href="/profile"
