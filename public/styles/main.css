@@ -4,6 +4,9 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 
 body{
 	font-family: 'Open Sans Condensed', sans-serif;
+	background-image: url("/rebel.png");
+	color: floralwhite;
+
 }
 
 h1{

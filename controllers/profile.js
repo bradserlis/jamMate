@@ -79,7 +79,14 @@ profileRoute.put('/edit', function(req, res){
 //destroy
 //==
 
-
+profileRoute.delete('/edit', function(req, res){
+	User.findByIdAndRemove(res.locals.currentUser.id, function(err, success){
+		if(err){
+			console.log(err);
+		}
+		res.render('home')
+	})
+})
 
 
 module.exports = profileRoute;

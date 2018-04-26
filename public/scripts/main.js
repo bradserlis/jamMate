@@ -30,6 +30,28 @@ function updateSuccess(){
 function updateFail(){
 	console.log('this did not send...')
 }
+
+
+$('#deleteAccountButton').click(function(e){
+	e.preventDefault();
+	$.ajax({
+		method: 'DELETE',
+		url:"/profile/edit",
+		data:$(this).serialize(),
+		success: updateSuccess,
+		error: updateFail
+	})
+})
+
+function deleteSuccess(){
+	console.log('this would delete')
+	window.location.href="/"
+}
+
+function deleteFail(){
+	console.log('this did not send...')
+}
+
 // function clickedThing(){
 // 	console.log("GAAAAH!")
 // }
