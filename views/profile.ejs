@@ -3,16 +3,24 @@
 <h2>Hello, welcome back, <%= currentUser.name %></h2>
 
 <h2>Username:<%= currentUser.name %> </h2>
-	<ul>Instruments: 
+	<ul><a data-toggle="collapse" aria-controls="collapseExample" href="#instrumentcollapse" role="button" aria-expanded="false"> Instruments: </a>
+		 <div class="collapse" id="instrumentcollapse">
+		  <div class="card card-body">
 		<%currentUser.instruments.forEach(function(item){ %>
-		<li><%= item %></li>
+		 <li><%= item %></li>
 		<% }) %>
+		</div>
+	</div>
 	</ul>
 	<hr>
-	<ul> Genres I Am Interested In Playing:
+	<ul><a data-toggle="collapse" aria-controls="collapseExample" href="#collapseExample" role="button" aria-expanded="false"> Genres I Am Interested In Playing: </a>
+	 <div class="collapse" id="collapseExample">
+	  <div class="card card-body">
 	<%currentUser.genresToPlay.forEach(function(item){ %>
 		<li><%= item %></li>
 		<% }) %>
+	</div>
+	</div>
 	</ul>
 	<hr>
 	<p>Location:<%= currentUser.zipcode %> </p>

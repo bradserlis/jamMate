@@ -8,6 +8,11 @@ body{
 	background-image: url("/binding_dark.png");
 }
 
+.sticky{
+	position: fixed;
+  top: 0;
+}
+
 .navbar-brand, h1{
 	font-family: 'Amatic SC', cursive;
 }
@@ -49,9 +54,7 @@ p{
   border-radius: 0;
 }
 
-.bg-dark{
-	background-color:#000000de!important
-}
+
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus{
   box-shadow: 2px -3px 1em 8px rgb(255, 255, 255); 
   transition: all .6s;
