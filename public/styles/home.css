@@ -41,7 +41,7 @@ h1{
 }
 
 
-body background-image{
+h1{
 	 -webkit-animation: flickerAnimation 1s infinite;
    -moz-animation: flickerAnimation 1s infinite;
    -o-animation: flickerAnimation 1s infinite;
@@ -75,27 +75,26 @@ body background-image{
 
 @keyframes titleanim {
 	from{color:white}
-	to{color:black};
-/*	to{color:#fdfdfdad}
-*/}
+	to{color:#fdfdfdad}
+}
 
 @keyframes flickerAnimation {
   0%   { opacity:1; }
-  50%  { opacity:0; }
+  50%  { opacity:0.6; }
   100% { opacity:1; }
 }
 @-o-keyframes flickerAnimation{
   0%   { opacity:1; }
-  50%  { opacity:0; }
+  50%  { opacity:.6; }
   100% { opacity:1; }
 }
 @-moz-keyframes flickerAnimation{
   0%   { opacity:1; }
-  50%  { opacity:0; }
+  50%  { opacity:.6; }
   100% { opacity:1; }
 }
 @-webkit-keyframes flickerAnimation{
   0%   { opacity:1; }
-  50%  { opacity:0; }
+  50%  { opacity:0.6; }
   100% { opacity:1; }
 }

@@ -22,6 +22,12 @@ $('#updateForm').on('submit', function(e){
 	})
 })
 
+
+$( function() {
+    $( ".accordion" ).accordion({
+      collapsible: true
+    });
+  } );
 $(".navbar-toggler").click(function(){
         $(".collapse").collapse('toggle');
     });

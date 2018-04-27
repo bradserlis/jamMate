@@ -1,5 +1,7 @@
+<h1>Search</h1>
 
-<h2>You are: <%= currentUser.name %></h2>
+<h2 id="searchName">You are: <%= currentUser.name %></h2>
+
 
 <p>Located in: <%= currentUser.zipcode%></p>
 <hr>
@@ -7,7 +9,7 @@
 
 <div class="row">
 <% matchedUsers.forEach(function(val){ %>
-	<div class="col-md-3 user-card">
+	<div class="col-md-3 offset-1 user-card">
 		<div class='card-head'>
 			<h2>Username:<%= val.name %> </h2>	
 		</div>
