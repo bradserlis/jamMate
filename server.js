@@ -16,7 +16,7 @@ const 		 express = require('express'),
 
 //connect to DB
 
-mongoose.connect('mongodb://localhost/jamMate');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/jamMate');
 
 //set and use statements
 
