@@ -4,7 +4,9 @@ const 	mongoose = require('mongoose'),
 		isLoggedIn = require('../middleware/isLoggedIn'),
 		request = require('request'),
 		profileRoute = express.Router(),
+		Comment = require('../models/comments')
 		User = require('../models/user');
+
 //=====
 //other declared variables
 //=====
@@ -60,6 +62,23 @@ profileRoute.get('/edit', isLoggedIn, function(req, res){
 //==
 //create
 //==
+
+profileRoute.post('/search/:id', function(req, res){
+	console.log('made it to the backend')
+	User.findById(req.params.id, function(err, target){
+		console.log(req.params.id)
+		console.log(target)
+		Comment.create(req.body, function(err, commentData){
+		console.log(req.body)
+		if(err){
+			console.log(err)
+		}	
+		target.comments.push(commentData);
+		target.save();
+		});
+	});
+	res.send("success message")
+})
 
 //==
 //update

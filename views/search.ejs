@@ -26,30 +26,27 @@
 		</ul>
 		<hr>
 		<p>Location:<%= val.zipcode %> </p>
-		<button class=""></button>
 		<br>
 		<br>
 		<div class="col-sm-5 col-12">
             <button type="button" class="add" data-toggle="modal" data-target="#commentModal">Leave a message</button>
  		</div>
 	</div>
-<% }); %> 
-</div>
-
 <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="commentlModalLabel">Comment</h5>
+        <h5 class="modal-title" id="commentlModalLabel">Leave a Message</h5>
       </div>
     <div class="modal-body">
-        <form id="commentForm" action="/profile/search">
+        <form id="<%= val._id %>" data-id="<%= val._id %>">
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Comment</label>
+                <label class="col-sm-4 col-form-label">Message:</label>
                 <div class="col-sm-4">
-                      <input type="text" class="form-control" name="message">
+                        <input type='text' class="form-control" name="message">	
+                        </input><span class="help-block">You may want to leave contact info for this user to reach you at -- messaging in-app coming soon!</span>
            		</div>
-            <button type="submit" form="commentForm" id="commentSubmit" method="POST" action=#>Leave Message</button>
+            <button type="submit" form="<%= val._id %>" class="commentSubmit"> Leave Message</button>
         	</div>
         </form>
 
@@ -57,3 +54,8 @@
 </div>
 </div>
 </div>
+<% }); %> 
+</div>
+
+<script src="../scripts/main.js"></script>
+

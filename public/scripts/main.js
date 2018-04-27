@@ -26,12 +26,14 @@ $('#commentForm').on('submit', function(e){
 	e.preventDefault();
 	console.log("comment form button worked")
 	$.ajax({
-		method: 'PUT',
-		url:"/profile/edit",
+		method: 'POST',
+		url:'/profile/search/'+$(this).attr('data-id'),
 		data:$(this).serialize(),
-		success: updateSuccess,
-		error: updateFail
-	})
+		success: commentSuccess,
+		error: commentFail
+	}).then(function(data){
+		console.log('hello')
+	});
 })
 
 
@@ -73,6 +75,14 @@ function deleteSuccess(){
 
 function deleteFail(){
 	console.log('this did not send...')
+}
+function commentSuccess(){
+	console.log('this would post comment')
+	// window.location.href="/"
+}
+
+function commentFail(){
+	console.log('this did not send a comment...')
 }
 
 // function clickedThing(){

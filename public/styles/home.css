@@ -23,15 +23,6 @@ body{
     
 }
 
-h1 text-shadow{
-	color:red;
-	animation: titleanim 2s ease-in-out infinite alternate;
-	-webkit-animation: flickerAnimation 1s infinite;
-   -moz-animation: flickerAnimation 1s infinite;
-   -o-animation: flickerAnimation 1s infinite;
-    animation: flickerAnimation 1s infinite;
-}
-
 h1{
 	font-size: 20em;
 	position: unset;
@@ -42,36 +33,11 @@ h1{
 
 
 h1{
-	 -webkit-animation: flickerAnimation 1s infinite;
-   -moz-animation: flickerAnimation 1s infinite;
-   -o-animation: flickerAnimation 1s infinite;
-    animation: flickerAnimation 1s infinite;
+	 -webkit-animation: flickerAnimation 2s ease infinite;
+   -moz-animation: flickerAnimation 2s ease infinite;
+   -o-animation: flickerAnimation 2s ease infinite;
+    animation: flickerAnimation 2s ease infinite;
 }
-
-/*@-webkit-keyframes pulsate {
-    0% {color: white}
-    20% {color: white}
-    40% {color: white}
-    60% {color: blue}
-    80% {color: blue}
-    100% {color: blue}
-}*/
-/*@-moz-keyframes pulsate {
-    0% {color: white}
-    20% {color: white}
-    40% {color: lightblue}
-    60% {color: lightblue}
-    80% {color: blue}
-    100% {color: lightblue}
-}*/
-/*@keyframes titleanim {
-    0% {color: white}
-    20% {color: white}
-    40% {color: white}
-    60% {color: blue}
-    80% {color: blue}
-    100% {color: blue}
-}*/
 
 @keyframes titleanim {
 	from{color:white}
@@ -80,21 +46,21 @@ h1{
 
 @keyframes flickerAnimation {
   0%   { opacity:1; }
-  50%  { opacity:0.6; }
+  50%  { opacity:0.7; }
   100% { opacity:1; }
 }
 @-o-keyframes flickerAnimation{
   0%   { opacity:1; }
-  50%  { opacity:.6; }
+  50%  { opacity:0.7; }
   100% { opacity:1; }
 }
 @-moz-keyframes flickerAnimation{
   0%   { opacity:1; }
-  50%  { opacity:.6; }
+  50%  { opacity:0.7; }
   100% { opacity:1; }
 }
 @-webkit-keyframes flickerAnimation{
   0%   { opacity:1; }
-  50%  { opacity:0.6; }
+  50%  { opacity:0.7; }
   100% { opacity:1; }
 }
