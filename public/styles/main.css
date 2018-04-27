@@ -2,6 +2,7 @@ font-family: 'Oxygen', sans-serif;
 font-family: 'Amatic SC', cursive;
 font-family: 'Open Sans Condensed', sans-serif;*/
 
+
 body{
 	font-family: 'Open Sans Condensed', sans-serif;
 	background-image: url("/binding_dark.png");
@@ -9,6 +10,15 @@ body{
 
 .navbar-brand, h1{
 	font-family: 'Amatic SC', cursive;
+}
+
+
+.navbar-dark .navbar-nav .nav-link{
+color:#007bff
+}
+
+.nav-item{
+	font-family: 'Oxygen', sans-serif;
 }
 
 .navbar-brand{
@@ -49,7 +59,7 @@ p{
 }
 
 .navbar a{
-  transition: all .4s;
+    transition: all 3s;
 }
 .navbar a:hover{
 	box-shadow: 2px -3px 1em 8px rgb(255, 255, 255); 
