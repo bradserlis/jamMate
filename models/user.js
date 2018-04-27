@@ -1,5 +1,7 @@
 const 	mongoose = require('mongoose'),
+		Comment = require('./comments.js')
 		bcrypt = require('bcrypt');
+
 
 
 //define what a user looks like in the database
@@ -16,7 +18,8 @@ const userSchema = new mongoose.Schema({
 				},
 	instruments:[ String ],
 	genresToPlay:[ String ],
-	zipcode: {type: Number, require:true}
+	zipcode: {type: Number, require:true},
+	comments: [Comment.schema]
 })
 
 //make a function that checks whether the password is correct

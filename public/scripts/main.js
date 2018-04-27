@@ -22,6 +22,19 @@ $('#updateForm').on('submit', function(e){
 	})
 })
 
+$('#commentForm').on('submit', function(e){
+	e.preventDefault();
+	console.log("comment form button worked")
+	$.ajax({
+		method: 'PUT',
+		url:"/profile/edit",
+		data:$(this).serialize(),
+		success: updateSuccess,
+		error: updateFail
+	})
+})
+
+
 
 $( function() {
     $( ".accordion" ).accordion({
