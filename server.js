@@ -11,6 +11,8 @@ const 		 express = require('express'),
 			 passport = require('./config/passportConfig'),
 			 session = require('express-session'),
 			 isLoggedIn = require('./middleware/isLoggedIn'),
+			 Comment = require('./models/comments'),
+			 User = require('./models/user'),
 			 port = process.env.PORT || 3000;
 
 
@@ -47,6 +49,49 @@ app.use(function(req, res, next){
 app.get('/', function(req, res){
 	res.render('home');
 });
+
+app.get('/show/:id', function(req, res){
+	User.findById(req.params.id, function(err, thisUser){
+	res.render('show', {thisUser: thisUser})
+	})
+})
+
+app.post('/show/:id', function(req, res){
+	console.log('made it to the backend')
+	User.findById(req.params.id, (err, target)=>{
+		console.log(req.params.id)
+		console.log(target)
+		Comment.create({message:'this is a message'}, (err, commentData)=>{
+		console.log(req.body)
+		if(err){
+			console.log(err)
+		}
+		console.log("this is commentData:", commentData)	
+		console.log('this is target comments:', target)
+		target.comments.push(commentData);
+		console.log('this is target comments after the push', commentData)
+		target.save();
+		});
+	});
+	res.send("success message")
+})
+
+// app.post('/show/:id', function(req, res){
+// 	console.log('made it to the backend')
+// 	User.findById(req.params.id, (err, target)=>{
+// 		console.log(req.params.id)
+// 		console.log(target)
+// 		User.update({_id: req.params.id}, {$push: {comments: req.body}}, (err, success)=>{
+// 		console.log(req.body)
+// 		if(err){
+// 			console.log(err);
+// 		} else
+// 		console.log(success);	
+// 		});
+// 	});
+// 	res.redirect("/profile")
+// })
+
 
 //include routes from any controllers/routes
 

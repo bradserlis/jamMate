@@ -27,7 +27,7 @@ $('#commentForm').on('submit', function(e){
 	console.log("comment form button worked")
 	$.ajax({
 		method: 'POST',
-		url:'/profile/search/'+$(this).attr('data-id'),
+		url:'/show/'+$(this).attr('data-id'),
 		data:$(this).serialize(),
 		success: commentSuccess,
 		error: commentFail
@@ -78,7 +78,7 @@ function deleteFail(){
 }
 function commentSuccess(){
 	console.log('this would post comment')
-	// window.location.href="/"
+	window.location.href="/profile"
 }
 
 function commentFail(){

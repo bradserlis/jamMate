@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
 	instruments:[ String ],
 	genresToPlay:[ String ],
 	zipcode: {type: Number, require:true},
-	comments: [Comment.schema]
+	comments: [ Comment.schema ]
 })
 
 //make a function that checks whether the password is correct
