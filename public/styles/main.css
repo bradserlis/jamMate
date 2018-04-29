@@ -86,6 +86,7 @@ body{
 	font-family: 'Open Sans Condensed', sans-serif;
 	background-image: url("/binding_dark.png");
 	padding-top: 100px;
+	color: white;
 }
 
 h1{
