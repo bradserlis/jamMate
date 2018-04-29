@@ -1,17 +1,17 @@
 <h1>Search</h1>
 
-<h2 id="searchName">You are: <%= currentUser.name %></h2>
+<h2 id="searchName"><%= currentUser.name %></h2>
 
 
-<p>Located in: <%= currentUser.zipcode%></p>
+<p>Located in: <%= currentUser.zipcode%></span></p>
 <hr>
 <hr>
 
 <div class="row">
 <% matchedUsers.forEach(function(val){ %>
-	<div class="col-md-3 offset-1 user-card">
+	<div class="col-md-3 user-card">
 		<div class='card-head'>
-			<h2>Username:<%= val.name %> </h2>	
+			<h2><%= val.name %> </h2>	
 		</div>
 		<ul>Instruments:
 			<%val.instruments.forEach(function(item){ %>
@@ -28,8 +28,8 @@
 		<p>Location:<%= val.zipcode %> </p>
 		<br>
 		<br>
-		<div class="col-sm-5 col-12">
-            <button type="button" class="add" data-toggle="modal" data-target="#commentModal">Leave a message</button>
+		<div class="col-sm-5 col-12 buttonDiv">
+            <button type="button" class="add btn btn-warning" data-toggle="modal" data-target="#commentModal">Leave a message</button>
  		</div>
 	</div>
 <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">

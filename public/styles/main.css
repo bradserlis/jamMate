@@ -1,20 +1,82 @@
 /*font-family: 'Oxygen', sans-serif;*/
 /*font-family: 'Amatic SC', cursive;*/
+/*font-family: 'Do Hyeon', sans-serif;*/
 /*font-family: 'Open Sans Condensed', sans-serif;*/
 
 
+.btn-warning{
+	position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    left: 60px;
+}
 
 #searchName{
 		color:#D5D5D5;
 
 }
 
-.row{
-	justify-content: space-between;
+.zipcode{
+	font-family: 'Oxygen', sans-serif;
+    /*font-size: 1.2em;*/
+    color: cornflowerblue;
 }
 
+.row{
+	justify-content: space-between;
+
+}
+
+.buttonDiv{
+	margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    padding-left: 85px;
+    padding-bottom: 5px;
+}
+
+
 .user-card{
-		margin-bottom: 15px;
+    margin: 37px 1px;
+    border-radius: 5%;
+    padding: 10px;
+    background: rgb(34, 89, 199);
+    transition: 1s linear;
+    box-shadow: -1px -1px 1em 0px rgb(86, 86, 86);
+}
+}
+
+.user-card p, .user-card li{
+	font-family: 'Do Hyeon', sans-serif;
+    font-size: 20px;
+    color: #071523;
+}
+
+.user-card li{
+    color: #0a151f;
+    font-family: Open Sans Condensed;
+    font-size: 23px;
+}
+
+.user-card ul{
+	font-size: 1.7em;
+    color: #d5d5d5;
+    line-height: 31px;
+}
+
+.user-card p{
+	color:#d5d5cf;
+	font-size: 22px;
+    font-family: Open Sans Condensed;
+}
+
+
+.user-card:hover{
+	box-shadow:inset 0px 0px 1em 0px rgb(236, 236, 234)
+}
+
+.card-head{
+	background:url"/rebel.png";
 }
 
 .bg-dark{
@@ -32,8 +94,10 @@ h1{
 }
 
 h2{
-	color:white;
-	text-align: center;
+	color: white;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Amatic SC', cursive;
 }
 
 h3{
@@ -41,8 +105,10 @@ h3{
 }
 
 p{
-	color: white;
-	text-align: center;
+    color: cornflowerblue;
+    text-align: center;
+    font-size: 20px;
+    font-family: Oxygen;
 }
 
 
@@ -68,14 +134,6 @@ color:#007bff
 	font-size:30px;
 }
 
-
-.card-head{
-	background:url"/rebel.png";
-}
-
-.user-card{
-	background: beige;
-}
 
 .navbar {
 /*  font-size: 20px;
@@ -110,7 +168,7 @@ color:#007bff
 
 @media(min-width:768px) {
     body {
-        padding-top: 100px;  Required padding for .navbar-fixed-top. Change if height of navigation changes. 
+        padding-top: 100px; 
     }
 
     .navbar-fixed-top .navbar-brand {
