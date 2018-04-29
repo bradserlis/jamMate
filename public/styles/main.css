@@ -3,6 +3,10 @@
 /*font-family: 'Do Hyeon', sans-serif;*/
 /*font-family: 'Open Sans Condensed', sans-serif;*/
  
+.messageText{
+	color:black;
+}
+
 .profileUl{
 	color:black;
 }
