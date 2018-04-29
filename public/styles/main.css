@@ -7,7 +7,7 @@
 .btn-warning{
 	position: absolute;
     bottom: 0;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     left: 60px;
 }
 
@@ -18,7 +18,6 @@
 
 .zipcode{
 	font-family: 'Oxygen', sans-serif;
-    /*font-size: 1.2em;*/
     color: cornflowerblue;
 }
 
@@ -28,7 +27,7 @@
 }
 
 .buttonDiv{
-	margin: 0 auto;
+    margin: 10px 15px;
     position: absolute;
     bottom: 0;
     padding-left: 85px;
