@@ -2,7 +2,14 @@
 /*font-family: 'Amatic SC', cursive;*/
 /*font-family: 'Do Hyeon', sans-serif;*/
 /*font-family: 'Open Sans Condensed', sans-serif;*/
+ 
+.profileUl{
+	color:black;
+}
 
+.profileA{
+	font-size:30px;
+}
 
  .button.add.btn.btn-warning.searchPage{
 	position: absolute;

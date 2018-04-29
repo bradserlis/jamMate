@@ -2,7 +2,7 @@
 
 <h2>Hello, welcome back, <%= currentUser.name %></h2>
 
-	<ul><a data-toggle="collapse" aria-controls="collapseExample" href="#instrumentcollapse" role="button" aria-expanded="false"> Instruments: </a>
+	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#instrumentcollapse" role="button" aria-expanded="false" class="profileA"> Instruments: </a>
 		 <div class="collapse" id="instrumentcollapse">
 		  <div class="card card-body">
 		<%currentUser.instruments.forEach(function(item){ %>
@@ -12,7 +12,7 @@
 	</div>
 	</ul>
 	<hr>
-	<ul><a data-toggle="collapse" aria-controls="collapseExample" href="#collapseExample" role="button" aria-expanded="false"> Genres I Am Interested In Playing: </a>
+	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#collapseExample" role="button" aria-expanded="false" class="profileA"> Genres I Am Interested In Playing: </a>
 	 <div class="collapse" id="collapseExample">
 	  <div class="card card-body">
 	<%currentUser.genresToPlay.forEach(function(item){ %>

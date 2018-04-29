@@ -27,7 +27,7 @@ profileRoute.get('/', isLoggedIn, function(req, res){
 
 profileRoute.get('/search', isLoggedIn, function(req, res){
 
-	request(`https://www.zipcodeapi.com/rest/${process.env.ITS_A_KEY}/radius.json/${res.locals.currentUser.zipcode}/10/miles?minimal`, function(error, response, body){
+	request(`https://www.zipcodeapi.com/rest/${process.env.ITS_A_KEY}/radius.json/${res.locals.currentUser.zipcode}/15/miles?minimal`, function(error, response, body){
 		if(error){
 			return console.log(err);
 		} 
