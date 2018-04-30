@@ -31,7 +31,9 @@ h1{
 	text-shadow: 0px 4px 3px rgb(255, 252, 252), 0px 8px 13px rgb(0,0,0), 0px 18px 23px rgb(255, 255, 255), 0px 4px 3px rgb(0,0,0), 0px 8px 13px rgb(0,0,0), -1px -20px 23px rgb(0,0,0);
 }
 
-
+h3{
+  text-align: center;
+}
 h1{
 	 -webkit-animation: flickerAnimation 2s ease infinite;
    -moz-animation: flickerAnimation 2s ease infinite;
