@@ -87,6 +87,8 @@ a.navbar-brand{
 
 h3{
   font-size: 45px;
+  text-shadow: 2px -7px 2px #2f2f2f, 7px 9px 2px #2f2f2f, 2px -7px 2px #2f2f2f;
+}
 }  
     
     body{
