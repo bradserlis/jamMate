@@ -3,7 +3,6 @@
 /*font-family: 'Do Hyeon', sans-serif;*/
 /*font-family: 'Open Sans Condensed', sans-serif;*/
 
-@media only screen and (min-width: 401px){
 
 
 th{
@@ -72,7 +71,6 @@ th{
     background: rgb(34, 89, 199);
     transition: 1s linear;
     box-shadow: -1px -1px 1em 0px rgb(86, 86, 86);
-}
 }
 
 .user-card p, .user-card li{
@@ -199,6 +197,9 @@ color:#007bff
     padding: 0 15px;
 }
 
+@media only screen and (min-width: 651px){
+
+
 }
 
 /*@media(min-width:768px) {
@@ -211,7 +212,16 @@ color:#007bff
     }
 }*/
 
-@media only screen and (max-width: 400px){
+@media all and (max-width: 991.98px){
+
+   /* div.container{
+        max-width: -webkit-fill-available;
+    }
+*/
+h2{
+   font-size: 200px;
+
+}
 
     body{
 
@@ -223,30 +233,37 @@ color:#007bff
     
     h1{
     font-size: 80px;
+        margin-top: 100px;
 
     }
-    p{
+
+.navbar a{
         font-size:40px;
+    }
+
+span.navbar-toggler-icon{
+        font-size: 70px;
+    }
+
+a.navbar-brand{
+  font-size: 80px;
+}
+
+
+
+    p{
+        font-size: 70px;
+    margin-top: 600px;
+    margin-left: 430px;
     }
 
     .profileA{
         font-size:50px;
     }
-    .navbar a{
-        font-size:40px;
-    }
+
     .btn{
         font-size: 50px;
     margin-bottom: 65px;
-    }
-
-    a.navbar-brand{
-            font-size: 60px;
-
-    }
-
-    span.navbar-toggler-icon{
-        font-size: 50px;
     }
 
     .user-card ul{
