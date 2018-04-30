@@ -24,7 +24,17 @@
 	<hr>
 	<p>Location:<%= currentUser.zipcode %> </p>
 	<br>
-	<br> 
+	<br>
+	<h3> Messages:</h3>
+	<% currentUser.comments.forEach(function(post){ %>
+	<div class="row">
+       	<div class="col-md-12">
+       		<table>
+       		<td><%= post.message %></p>
+       		</table>
+		<%}) %> 
+		</div>
+	</div>
 <a href="/profile/edit" style="text-decoration-line: none" "><button type="button" name="editButton" class="editBtn btn btn-block btn-warning">Edit Profile</button></a>
 
 
