@@ -218,6 +218,15 @@ color:#007bff
         max-width: -webkit-fill-available;
     }
 */
+
+.form-group{
+        font-size: 120px;
+}
+
+.form-control{
+        font-size: 50px;
+
+}
 h2{
    font-size: 200px;
 
