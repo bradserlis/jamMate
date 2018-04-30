@@ -3,10 +3,20 @@
 [Try JamMate now!](https://jam-mate.herokuapp.com "JamMate")
 
 # Screenshots
+JamMate:
+![screen shot 2018-04-30 at 12 29 32 pm](https://user-images.githubusercontent.com/36775791/39446114-37f7b28e-4c72-11e8-8ed7-d429e969d80f.png)
 
-![day3](https://user-images.githubusercontent.com/36775791/39435947-86403ebe-4c51-11e8-83c9-144343ebc2b6.png)
+![screen shot 2018-04-30 at 12 31 15 pm](https://user-images.githubusercontent.com/36775791/39446175-7787d2e4-4c72-11e8-8e72-1e45d886eea6.png)
+![screen shot 2018-04-30 at 12 31 31 pm](https://user-images.githubusercontent.com/36775791/39446176-779a374a-4c72-11e8-81e8-a083a0aab63d.png)
+
+Progress Photos:
+
+wireframe for User Profile View:
 ![profile](https://user-images.githubusercontent.com/36775791/39435948-8655b3ac-4c51-11e8-9c9a-27412d5c83f1.png)
+wireframe for Search Results View:
 ![search](https://user-images.githubusercontent.com/36775791/39435949-8669ff88-4c51-11e8-953f-ae75ef64707f.png)
+Day 3 of progress:
+![day3](https://user-images.githubusercontent.com/36775791/39435947-86403ebe-4c51-11e8-83c9-144343ebc2b6.png)
 
 # What is it?
 
