@@ -8,7 +8,7 @@ const 	mongoose = require('mongoose'),
 
 showRoute.get('/:id', function(req, res){
 	User.findById(req.params.id, function(err, thisUser){
-	res.render('show', {thisUser: thisUser})
+	res.render('show', {thisUser: thisUser, currentUser: res.locals.currentUser})
 	})
 })
 
