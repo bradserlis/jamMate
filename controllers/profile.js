@@ -22,7 +22,7 @@ let matchedUsers = [];
 //==
 
 profileRoute.get('/', isLoggedIn, function(req, res){
-	res.render('profile', {currentUser:res.locals.currentUser});
+	res.render('./profile/profile', {currentUser:res.locals.currentUser});
 });
 
 profileRoute.get('/search', isLoggedIn, function(req, res){
@@ -50,13 +50,13 @@ profileRoute.get('/search', isLoggedIn, function(req, res){
 		// res.render('search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser})
 		// res.render('search', {matchedUsers: matchedUsers})
 	});
-	res.render('search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser})
+	res.render('./profile/search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser})
 	matchedUsers = [];
 });
 
 
 profileRoute.get('/edit', isLoggedIn, function(req, res){
-	res.render('edit')
+	res.render('./profile/edit')
 })
 
 
@@ -74,7 +74,7 @@ profileRoute.put('/edit', function(req, res){
 		if(err){
 		return console.log(err);
 		}
-		res.render('profile')
+		res.render('./profile/profile')
 		console.log(result)
 	})
 })

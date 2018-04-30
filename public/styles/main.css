@@ -122,6 +122,9 @@ p{
     font-family: Oxygen;
 }
 
+a:hover{
+	text-decoration: none;
+}
 
 .sticky{
 	position: fixed;

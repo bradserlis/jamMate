@@ -8,6 +8,7 @@ const 		 express = require('express'),
 			 flash = require('connect-flash'),
 			 authRoute = require('./controllers/auth'),
 			 profileRoute = require('./controllers/profile'),
+			 showRoute = require('./controllers/show'),
 			 passport = require('./config/passportConfig'),
 			 session = require('express-session'),
 			 isLoggedIn = require('./middleware/isLoggedIn'),
@@ -50,53 +51,13 @@ app.get('/', function(req, res){
 	res.render('home');
 });
 
-app.get('/show/:id', function(req, res){
-	User.findById(req.params.id, function(err, thisUser){
-	res.render('show', {thisUser: thisUser})
-	})
-})
-
-app.post('/show/:id', function(req, res){
-	console.log('made it to the backend')
-	User.findById(req.params.id, (err, target)=>{
-		console.log('user id to match:',req.params.id)
-		console.log('user that came back from search:',target)
-		console.log('req.body to be used to create new comment:',req.body)
-		Comment.create(req.body, (err, commentData)=>{
-		if(err){
-			console.log(err)
-		}
-		console.log("this is the result of the save, commentdata:", commentData)	
-		console.log('this is target comments:', target.comments)
-		target.comments.push(commentData);
-		console.log('this is target comments after the push', commentData)
-		target.save();
-		});
-	});
-	res.send("success message")
-})
-
-// app.post('/show/:id', function(req, res){
-// 	console.log('made it to the backend')
-// 	User.findById(req.params.id, (err, target)=>{
-// 		console.log(req.params.id)
-// 		console.log(target)
-// 		User.update({_id: req.params.id}, {$push: {comments: req.body}}, (err, success)=>{
-// 		console.log(req.body)
-// 		if(err){
-// 			console.log(err);
-// 		} else
-// 		console.log(success);	
-// 		});
-// 	});
-// 	res.redirect("/profile")
-// })
 
 
 //include routes from any controllers/routes
 
 app.use('/auth', authRoute);
 app.use('/profile', profileRoute);
+app.use('/show', showRoute);
 
 
 //listen
