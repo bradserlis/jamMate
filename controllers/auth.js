@@ -14,7 +14,7 @@ authRoute.get('/login', function(req, res){
 
 authRoute.post('/login', passport.authenticate('local', {
 	successRedirect: '/profile',
-	successFlash: 'Good work, you logged in',
+	successFlash: 'logged in successfully',
 	failureRedirect: '/auth/login',
 	failureFlash: 'Invalid credentials'
 }));
