@@ -6,16 +6,20 @@
 <h1> <%=thisUser.name %> </h1>
 
 
-	<ul>Instruments: </a>
+	<ul><span class='showUl'>Instruments:</span>
 <%thisUser.instruments.forEach(function(item){ %>
+		<div class="showLi">
 		<li><%= item %></li>
-		<% }) %>
+		<% }) %>	
+		</div>
 	</ul>
 	<hr>
-	<ul> Genres I Am Interested In Playing: </a>
+	<ul><span class='showUl'> Genres I Am Interested In Playing:</span>
 		<%thisUser.genresToPlay.forEach(function(item){ %>
+			<div class="showLi">
 			<li><%= item %></li>
 		<% }) %>
+			</div>
 	</ul>
 	
 	<hr>
