@@ -9,6 +9,10 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.commentSubmit{
+        margin-left: 400px;
+
+}
 
 .right{
     text-align: right;
@@ -236,12 +240,47 @@ color:#007bff
 
 
 @media all and (max-width: 991.98px){
+
 input[type=checkbox]{
     -ms-transform: scale(4); /* IE */
     -moz-transform: scale(4); /* FF */
     -webkit-transform: scale(4); /* Safari and Chrome */
     -o-transform: scale(4); /* Opera */
     margin-right: 40px;
+}
+
+.commentSubmit{
+        margin-left: 150px;
+
+}
+
+label.col-sm-12.col-form-label{
+font-size:60px;
+}
+
+span.help-block p{
+    font-size: 35px;
+}
+
+text-area.form-control{
+    font-size: 35px;
+}
+
+h5#commentlModalLabel.modal-title{
+    font-size: 50px;
+}
+
+div.modal-content{
+    width:700px;
+}
+
+div.modal-body{
+/*    height:1200px;
+*/    padding: 3.5rem;
+}
+
+div.modal-dialog.modal-lg{
+    margin-right:350px;
 }
 
 div.alert.alert-success{
