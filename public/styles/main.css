@@ -4,6 +4,12 @@
 /*font-family: 'Open Sans Condensed', sans-serif;*/
 
 
+.commentTable{
+        border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
 .right{
     text-align: right;
 }
@@ -11,6 +17,10 @@
         padding: 0.5rem;
 
 }
+.table td, .table th{
+            border-top: none;
+}
+
 th{
     font-size: 25px;
     color: #0072fb;
@@ -69,7 +79,9 @@ th{
     padding-bottom: 5px;
 }
 
-
+.editBtn{
+    margin-bottom: 30px;
+}
 .user-card{
     margin: 37px 1px;
     border-radius: 5%;
@@ -121,6 +133,7 @@ body{
     background-image: url("/binding_dark.png");
     padding-top: 100px;
     color: white;
+    margin-bottom: 40px;
 }
 
 h1{
@@ -218,73 +231,124 @@ color:#007bff
     }
 }*/
 
+
+
+
+
 @media all and (max-width: 991.98px){
+input[type=checkbox]{
+    -ms-transform: scale(4); /* IE */
+    -moz-transform: scale(4); /* FF */
+    -webkit-transform: scale(4); /* Safari and Chrome */
+    -o-transform: scale(4); /* Opera */
+    margin-right: 40px;
+}
 
-   /* div.container{
-        max-width: -webkit-fill-available;
-    }
-*/
+div.alert.alert-success{
+        font-size: 60px;
+            margin-top: 40px;
 
-ul.profileUl{
-        font-size: 10px;
+}
+div.alert.alert-danger{
+
+font-size: 60px;
+    margin-top: 40px;
+}
+
+div.form-group.zipcodeUpdate input{
+        font-size: 60px;
 
 }
 
-.form-group{
-        font-size: 120px;
-}
-
-.form-control{
-        font-size: 50px;
-
-}
-h2{
-   font-size: 100px;
-
-}
-
-h3{
-        font-size: 70px;
-            margin-top: 50px;
-
-
-}
-
-    body{
-
-    background-size: contain;
-    height: auto;
-    background-attachment: fixed;
-    font-size:245px;
-    }
-    
-    h1{
+.form-group.instrumentsUpdate, .form-group.genresUpdate{
     font-size: 80px;
-        margin-top: 100px;
+    margin: 100px 0px;
+}
+    #deleteAccountButton{
+            width: -webkit-fill-available;
 
     }
 
-    li{
+    p.warning{
+        font-size: 35px;
+        font-style: italic;
+        color: red;
+    }
+
+    .buttonDiv{
+        padding-left: 65px;
+    }
+
+    .user-card{
+            height: auto;
+            padding: 0px 150px;
+    }
+
+    ul.profileUl{
+            font-size: 10px;
+
+    }
+
+    ul{
+            font-size: 170px;
+    }
+
+    .form-group{
+            font-size: 120px;
+    }
+
+    .form-control{
             font-size: 50px;
 
     }
+    h2{
+       font-size: 100px;
 
-.navbar a{
-        font-size:40px;
     }
 
-span.navbar-toggler-icon{
+    h3{
         font-size: 70px;
+        margin-top: 50px;
     }
 
-a.navbar-brand{
-  font-size: 80px;
-}
+    body{
 
+        background-size: contain;
+        height: auto;
+        background-attachment: fixed;
+        font-size:245px;
+        margin-bottom: 120px;
 
+    }
+            
+    h1{
+        font-size: 130px;
+        margin-top: 100px;
+    }
+
+    li{
+        font-size: 50px;
+    }
+
+    .navbar a{
+            font-size:40px;
+    }
+
+    span.navbar-toggler-icon{
+            font-size: 70px;
+    }
+
+    a.navbar-brand{
+      font-size: 80px;
+    }
 
     p{
         font-size: 50px;
+    }
+
+    a.profileA{
+            font-size: 70px;
+
     }
 
     .profileA{
@@ -309,10 +373,10 @@ a.navbar-brand{
             font-size: 52px;
 
     }
-    .buttonDiv{
+    /*  .buttonDiv{
             padding-left: 200px;
 
-    }
+    }*/
 
      .showUl{
             font-size: 63px;
@@ -321,31 +385,40 @@ a.navbar-brand{
     .showLi{
         font-size: 50px;
     }
-.table td, .table th{
-            border-top: none;
-}
+    .table td, .table th{
+        border-top: none;
+    }
+
     td{
-    font-size: 60px;
+        font-size: 60px;
     }
 
     td.right{
         font-size: 35px;
-    word-break: break-word;
+        word-break: break-word;    
     }
 
     span.pull-right{
-            font-size: 40px;
-    word-break: break-word;
-    display: inherit;
+        font-size: 40px;
+        word-break: break-word;
+        display: inherit;
     }
-.commentTable{
-        border: 1px solid white;
-}
-    th{
-            font-size: 65px;
-            border-bottom: 1px solid #0071fb;
 
+    .commentTable{
+        border: 1px solid white;
     }
+    th{
+        font-size: 65px;
+        border-bottom: 1px solid #0071fb;
+    }
+
+    .editBtn{
+        margin-bottom: 30px;
+            display: block;
+    width: -webkit-fill-available;
+    }
+
+
 }
 
 

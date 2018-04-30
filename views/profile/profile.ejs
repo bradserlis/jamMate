@@ -1,9 +1,14 @@
 <h1>PROFILE PAGE</h1>
 
+<div>
+	<a href="/profile/edit" style="text-decoration-line: none"><button type="button" name="editButton" class="editBtn btn btn-warning">Edit Profile</button></a>
+
+</div>
 <h2>Hello, welcome back, <%= currentUser.name %></h2>
 	<p>Location:<%= currentUser.zipcode %> </p>
 
-	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#instrumentcollapse" role="button" aria-expanded="false" class="profileA"> Instruments: </a>
+
+	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#instrumentcollapse" role="button" aria-expanded="true" class="profileA"> Instruments: <i class="fas fa-angle-double-down"></i></a>
 		 <div class="collapse" id="instrumentcollapse">
 		  <div class="card card-body">
 		<%currentUser.instruments.forEach(function(item){ %>
@@ -13,7 +18,7 @@
 	</div>
 	</ul>
 	<hr>
-	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#collapseExample" role="button" aria-expanded="false" class="profileA"> Genres I Am Interested In Playing: </a>
+	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#collapseExample" role="button" aria-expanded="true" class="profileA"> Genres I Am Interested In Playing: <i class="fas fa-angle-double-down"></i></a>
 	 <div class="collapse" id="collapseExample">
 	  <div class="card card-body">
 	<%currentUser.genresToPlay.forEach(function(item){ %>
@@ -41,7 +46,4 @@
        		</table>
 		<%}) %> 
 		</div>
-	</div>	
-<a href="/profile/edit" style="text-decoration-line: none" "><button type="button" name="editButton" class="editBtn btn btn-block btn-warning">Edit Profile</button></a>
-
-
+	</div>

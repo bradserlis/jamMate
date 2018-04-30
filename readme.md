@@ -18,7 +18,7 @@ The goal was to provide, at-a-glance, a fast answer to knowing who is nearby you
 
 # Technology
 
-JS, HTML, CSS, Bootstrap, Response, Express, MongoDB/Mongoose, Jquery
+JS, HTML, CSS, Bootstrap, Response, Express, MongoDB/Mongoose, Jquery, passport, bcrypt, body-parser, express-sessions, connect-flash
 
 # Approach Taken
 
