@@ -18,6 +18,25 @@ wireframe for Search Results View:
 Day 3 of progress:
 ![day3](https://user-images.githubusercontent.com/36775791/39435947-86403ebe-4c51-11e8-83c9-144343ebc2b6.png)
 
+
+#Routes
+
+| CRUD          | Route             | Functionality                      |
+|:--------------|:------------------|:-----------------------------------|
+| GET           | /		            | Renders app homepage               |
+| GET           | /profile          | Renders user's profile             |
+| GET           | /profile/search   | calls API to retrieve list of users|
+| GET           | /profile/edit     | Renders user's edit profile view   |
+| PUT           | /profile/edit     | Updates User's Profile             |
+| DELETE        | /profile/edit     | Deletes User's Profile             |
+| GET           | /auth/signup      | Renders signup page                |
+| POST          | /auth/signup      | Creates new User                   |
+| POST          | /auth/login       | Logs User In                       |
+| GET           | /auth/logout      | Logs User Out                      |
+| GET           | /show/:id         | Renders a specifc user's profile   |
+| POST          | /show/:id         | Posts a message to a User          |
+
+
 # What is it?
 
 JamMate is an app made to connect you with local musicians who are looking to find new people to play music with. Whether your intention is to add members to an existing band, join another person's group, or to simply find a new like-minded friend to play music with, JamMate can quickly expose you to the individuals near you.
