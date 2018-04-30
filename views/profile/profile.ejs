@@ -29,9 +29,15 @@
 	<% currentUser.comments.forEach(function(post){ %>
 	<div class="row">
        	<div class="col-md-12">
-       		<table>
-       		<tr><%= post.author%></tr>
-       		<td><%= post.message %></td>
+       		<table class='table'>
+       		<thead class="thead-dark">
+       		</thead>
+       		<tbody>
+       		<th><%= post.author%>:</th>
+       		<tr>	
+       		<td>"<%= post.message %>"</td>
+       		</tr>
+       		</tbody>
        		</table>
 		<%}) %> 
 		</div>
