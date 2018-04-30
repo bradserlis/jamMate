@@ -42,7 +42,8 @@
                         <input type='text' class="form-control" name="message">	
                         </input>
                         <span class="help-block">You may want to leave contact info for this user to reach you at -- messaging in-app coming soon!</span>
-                        <input type="text" class="form-control" name="author" value="<%=currentUser.name%>" hidden="true">
+                        <input type="text" class="form-control" name="author" value="<%=currentUser.name%>" hidden="true"> 
+                        <input type="text" class="form-control" name="date" value="<%=currentTime %>" hidden="true">
            		</div>
             <button type="submit" form="commentForm" class="commentSubmit"> Leave Message</button>
         	</div>

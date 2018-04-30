@@ -3,8 +3,9 @@
 /*font-family: 'Do Hyeon', sans-serif;*/
 /*font-family: 'Open Sans Condensed', sans-serif;*/
  
-tr{
-    
+th{
+    font-size: 25px;
+    color: #0072fb;
 }
 
 .messageText{

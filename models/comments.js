@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 
 const commentSchema = mongoose.Schema({
    message: String,
-   author: String
-});
+   author: String,
+	date: { type: Date, default: Date.now }
+	});
 
 
 

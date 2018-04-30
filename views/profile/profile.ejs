@@ -1,6 +1,7 @@
 <h1>PROFILE PAGE</h1>
 
 <h2>Hello, welcome back, <%= currentUser.name %></h2>
+	<p>Location:<%= currentUser.zipcode %> </p>
 
 	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#instrumentcollapse" role="button" aria-expanded="false" class="profileA"> Instruments: </a>
 		 <div class="collapse" id="instrumentcollapse">
@@ -22,7 +23,6 @@
 	</div>
 	</ul>
 	<hr>
-	<p>Location:<%= currentUser.zipcode %> </p>
 	<br>
 	<br>
 	<h3> Messages:</h3>
@@ -36,6 +36,7 @@
        		<th><%= post.author%>:</th>
        		<tr>	
        		<td>"<%= post.message %>"</td>
+       		<td><span class="pull-right"><%= post.date %></span></td>
        		</tr>
        		</tbody>
        		</table>
@@ -45,4 +46,3 @@
 <a href="/profile/edit" style="text-decoration-line: none" "><button type="button" name="editButton" class="editBtn btn btn-block btn-warning">Edit Profile</button></a>
 
 
-<p><%=console.log("i hate living in:", currentUser.zipcode)%></p>
