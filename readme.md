@@ -60,5 +60,7 @@ Proximity of user creates search results within 15 miles of the user. This is ba
 
 # Unsolved
 
+Search results takes two presses for the initial search.
+
 Would like to create more robust messaging within-app. Also, filtering search results of users based on instrument or genres they are interested in are works in progress and not in production at this time. 
 
