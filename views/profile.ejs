@@ -1,0 +1,44 @@
+<h1>PROFILE PAGE</h1>
+
+<h1>WHAT HAPPENED!?</h1>
+
+<h2>Hello, welcome back, <%= currentUser.name %></h2>
+
+
+
+	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#instrumentcollapse" role="button" aria-expanded="false" class="profileA"> Instruments: </a>
+		 <div class="collapse" id="instrumentcollapse">
+		  <div class="card card-body">
+		<%currentUser.instruments.forEach(function(item){ %>
+		 <li><%= item %></li>
+		<% }) %>
+		</div>
+	</div>
+	</ul>
+	<hr>
+	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#collapseExample" role="button" aria-expanded="false" class="profileA"> Genres I Am Interested In Playing: </a>
+	 <div class="collapse" id="collapseExample">
+	  <div class="card card-body">
+	<%currentUser.genresToPlay.forEach(function(item){ %>
+		<li><%= item %></li>
+		<% }) %>
+	</div>
+	</div>
+	</ul>
+	<hr>
+	<p>Location:<%= currentUser.zipcode %> </p>
+	<br>
+	<br> 
+	<% currentUser.comments.forEach(function(post){ %>
+	<%= console.log(post) %>
+	<%= console.log(currentUser.comments) %>
+	<%= console.log(post.message)%>
+	<p><%= post.message %> </p>
+ <%	}) %>
+
+ 
+<a href="/profile/edit" style="text-decoration-line: none" "><button type="button" name="editButton" class="editBtn btn btn-block btn-warning">Edit Profile</button></a>
+
+
+<p><%=console.log("i hate living in:", currentUser.name)%></p>
+<p>	<%= console.log(currentUser.name) %> </p>
