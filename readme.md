@@ -4,8 +4,9 @@
 
 # Screenshots
 
-![screen shot 2018-04-11 at 8 05 57 am](https://user-images.githubusercontent.com/36775791/38625455-5ce785e6-3d5f-11e8-897d-99672047af8c.png)
-![screen shot 2018-04-11 at 8 06 07 am](https://user-images.githubusercontent.com/36775791/38625459-5d27066c-3d5f-11e8-8041-fbfd5d280ffc.png)
+![day3](https://user-images.githubusercontent.com/36775791/39435947-86403ebe-4c51-11e8-83c9-144343ebc2b6.png)
+![profile](https://user-images.githubusercontent.com/36775791/39435948-8655b3ac-4c51-11e8-9c9a-27412d5c83f1.png)
+![search](https://user-images.githubusercontent.com/36775791/39435949-8669ff88-4c51-11e8-953f-ae75ef64707f.png)
 
 # What is it?
 
