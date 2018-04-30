@@ -4,7 +4,13 @@
 /*font-family: 'Open Sans Condensed', sans-serif;*/
 
 
+.right{
+    text-align: right;
+}
+.table th{
+        padding: 0.5rem;
 
+}
 th{
     font-size: 25px;
     color: #0072fb;
@@ -219,6 +225,11 @@ color:#007bff
     }
 */
 
+ul.profileUl{
+        font-size: 10px;
+
+}
+
 .form-group{
         font-size: 120px;
 }
@@ -228,7 +239,14 @@ color:#007bff
 
 }
 h2{
-   font-size: 200px;
+   font-size: 100px;
+
+}
+
+h3{
+        font-size: 70px;
+            margin-top: 50px;
+
 
 }
 
@@ -243,6 +261,11 @@ h2{
     h1{
     font-size: 80px;
         margin-top: 100px;
+
+    }
+
+    li{
+            font-size: 50px;
 
     }
 
@@ -261,9 +284,7 @@ a.navbar-brand{
 
 
     p{
-        font-size: 70px;
-    margin-top: 600px;
-    margin-left: 430px;
+        font-size: 50px;
     }
 
     .profileA{
@@ -299,6 +320,31 @@ a.navbar-brand{
     }
     .showLi{
         font-size: 50px;
+    }
+.table td, .table th{
+            border-top: none;
+}
+    td{
+    font-size: 60px;
+    }
+
+    td.right{
+        font-size: 35px;
+    word-break: break-word;
+    }
+
+    span.pull-right{
+            font-size: 40px;
+    word-break: break-word;
+    display: inherit;
+    }
+.commentTable{
+        border: 1px solid white;
+}
+    th{
+            font-size: 65px;
+            border-bottom: 1px solid #0071fb;
+
     }
 }
 

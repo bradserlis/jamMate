@@ -23,12 +23,11 @@
 	</div>
 	</ul>
 	<hr>
-	<br>
-	<br>
+
 	<h3> Messages:</h3>
 	<% currentUser.comments.forEach(function(post){ %>
 	<div class="row">
-       	<div class="col-md-12">
+       	<div class="col-md-12 commentTable">
        		<table class='table table-striped'>
        		<thead class="thead-dark">
        		</thead>
@@ -36,13 +35,13 @@
        		<th><%= post.author%>:</th>
        		<tr>	
        		<td>"<%= post.message %>"</td>
-       		<td><span class="pull-right"><%= post.date %></span></td>
+       		<td class='right'><%= post.date %></td>
        		</tr>
        		</tbody>
        		</table>
 		<%}) %> 
 		</div>
-	</div>
+	</div>	
 <a href="/profile/edit" style="text-decoration-line: none" "><button type="button" name="editButton" class="editBtn btn btn-block btn-warning">Edit Profile</button></a>
 
 
