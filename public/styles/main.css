@@ -2,24 +2,27 @@
 /*font-family: 'Amatic SC', cursive;*/
 /*font-family: 'Do Hyeon', sans-serif;*/
 /*font-family: 'Open Sans Condensed', sans-serif;*/
- 
+
+@media only screen and (min-width: 401px){
+
+
 th{
     font-size: 25px;
     color: #0072fb;
 }
 
 .messageText{
-	color:black;
+    color:black;
 }
 
 .profileUl{
-	color:black;
+    color:black;
     padding-left: 0;
 
 }
 
 .profileA{
-	font-size:30px;
+    font-size:30px;
 }
 
 .showUl{
@@ -32,24 +35,24 @@ th{
 }
 
  .button.add.btn.btn-warning.searchPage{
-	position: absolute;
+    position: absolute;
     bottom: 0;
     margin-bottom: 0px;
     left: 60px;
 }
 
 #searchName{
-		color:#D5D5D5;
+        color:#D5D5D5;
 
 }
 
 .zipcode{
-	font-family: 'Oxygen', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     color: cornflowerblue;
 }
 
 .row{
-	justify-content: space-between;
+    justify-content: space-between;
 
 }
 
@@ -73,7 +76,7 @@ th{
 }
 
 .user-card p, .user-card li{
-	font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
     font-size: 20px;
     color: #071523;
 }
@@ -85,50 +88,50 @@ th{
 }
 
 .user-card ul{
-	font-size: 1.7em;
+    font-size: 1.7em;
     color: #d5d5d5;
     line-height: 31px;
 }
 
 .user-card p{
-	color:#d5d5cf;
-	font-size: 22px;
+    color:#d5d5cf;
+    font-size: 22px;
     font-family: Open Sans Condensed;
 }
 
 
 .user-card:hover{
-	box-shadow:inset 0px 0px 1em 0px rgb(236, 236, 234)
+    box-shadow:inset 0px 0px 1em 0px rgb(236, 236, 234)
 }
 
 .card-head{
-	background:url"/rebel.png";
+    background:url"/rebel.png";
 }
 
 .bg-dark{
-	background-color:#000000de!important
+    background-color:#000000de!important
 }
 
 body{
-	font-family: 'Open Sans Condensed', sans-serif;
-	background-image: url("/binding_dark.png");
-	padding-top: 100px;
-	color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-image: url("/binding_dark.png");
+    padding-top: 100px;
+    color: white;
 }
 
 h1{
-	color: white;
+    color: white;
 }
 
 h2{
-	color: white;
+    color: white;
     text-align: center;
     font-size: 3em;
     font-family: 'Amatic SC', cursive;
 }
 
 h3{
-	color: white;
+    color: white;
 }
 
 p{
@@ -139,16 +142,16 @@ p{
 }
 
 a:hover{
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .sticky{
-	position: fixed;
+    position: fixed;
   top: 0;
 }
 
 .navbar-brand, h1{
-	font-family: 'Amatic SC', cursive;
+    font-family: 'Amatic SC', cursive;
 }
 
 
@@ -157,11 +160,11 @@ color:#007bff
 }
 
 .nav-item{
-	font-family: 'Oxygen', sans-serif;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .navbar-brand{
-	font-size:30px;
+    font-size:30px;
 }
 
 
@@ -183,8 +186,8 @@ color:#007bff
     transition: all 1s;
 }
 .navbar a:hover{
-	box-shadow: 1px -5px 3em 4px rgb(255, 255, 255); 
-  	transition: all .4s;
+    box-shadow: 1px -5px 3em 4px rgb(255, 255, 255); 
+    transition: all .4s;
     background-color: #040404bf;
 }
 
@@ -196,7 +199,9 @@ color:#007bff
     padding: 0 15px;
 }
 
-@media(min-width:768px) {
+}
+
+/*@media(min-width:768px) {
     body {
         padding-top: 100px; 
     }
@@ -204,15 +209,71 @@ color:#007bff
     .navbar-fixed-top .navbar-brand {
         padding: 15px 0;
     }
-}
+}*/
 
-@media only screen and (max-width:450px){
+@media only screen and (max-width: 400px){
 
     body{
 
     background-size: contain;
     height: auto;
     background-attachment: fixed;
+    font-size:245px;
+    }
+    
+    h1{
+    font-size: 80px;
+
+    }
+    p{
+        font-size:40px;
+    }
+
+    .profileA{
+        font-size:50px;
+    }
+    .navbar a{
+        font-size:40px;
+    }
+    .btn{
+        font-size: 50px;
+    margin-bottom: 65px;
+    }
+
+    a.navbar-brand{
+            font-size: 60px;
+
+    }
+
+    span.navbar-toggler-icon{
+        font-size: 50px;
+    }
+
+    .user-card ul{
+        line-height: inherit;
+
+    }
+
+    .user-card li{
+            font-size: 53px;
+
+    }
+    .user-card p{
+            font-size: 52px;
+
+    }
+    .buttonDiv{
+            padding-left: 200px;
+
+    }
+
+     .showUl{
+            font-size: 63px;
+
+    }
+    .showLi{
+        font-size: 50px;
     }
 }
+
 

@@ -67,19 +67,35 @@ h1{
   100% { opacity:1; }
 }
 
-@media only screen and (max-width:450px){
+@media screen and (min-width:250px) and (max-width:450px){
   h1{
-    margin-top: 50px;
-    font-size: -webkit-xxx-large;
+    margin-top: 350px;
+    font-size: 300px;
 }
-  
+
+.navbar a{
+        font-size:40px;
+    }
+
+span.navbar-toggler-icon{
+        font-size: 50px;
+    }
+
+a.navbar-brand{
+  font-size: 60px;
+}
+
+h3{
+  font-size: 45px;
+}  
     
     body{
 
     background-image: url(/music.jpg);
-    background-size: contain;
-    height: auto;
+    background-size: cover;
+    height: -webkit-fill-available;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: bottom;
+
     }
 }
