@@ -25,14 +25,29 @@ profileRoute.get('/', isLoggedIn, function(req, res){
 	res.render('./profile/profile', {currentUser:res.locals.currentUser});
 });
 
-profileRoute.get('/search', isLoggedIn, function(req, res){
 
-	request(`https://www.zipcodeapi.com/rest/${process.env.ITS_A_KEY}/radius.json/${res.locals.currentUser.zipcode}/15/miles?minimal`, function(error, response, body){
+profileRoute.get('/search', isLoggedIn, function(req, res){
+	request(`https://www.zipcodeapi.com/rest/${process.env.ITS_A_KEY}/radius.json/${res.locals.currentUser.zipcode}/15/miles?minimal`, 
+		function(error, response, body){
 		if(error){
 			return console.log(err);
 		} 
 		//made the json call into an object
 		let bodyObj = JSON.parse(body);
+		//reduce the amount of queries, by using a for in
+		//pseudo: User.find {zipcode} in bodyobj.zipcodes
+
+		//example: 
+		// User.find(
+		// 	{'zipcode:' { $in bodyObj.zip_codes}}, function(err, match){
+		// 		match.forEach(function(element){
+		// 			if(element !== []){
+		// 				matchedUsers.push(element)
+		// 			}
+		// 		})	 
+		// 	}
+		// )
+
 		bodyObj.zip_codes.forEach(function(zip){
 			zip = Number(zip);
 			User.find({zipcode: zip}, function(err, match){
@@ -46,14 +61,12 @@ profileRoute.get('/search', isLoggedIn, function(req, res){
 				});
 			});
 		});
-		// console.log('matchedUsers looks like this:', matchedUsers);
-		// res.render('search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser})
-		// res.render('search', {matchedUsers: matchedUsers})
-	});
-	res.render('./profile/search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser})
-	matchedUsers = [];
-});
+		res.render('./profile/search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser});
+			matchedUsers = [];
 
+	}); // end callback function from request call
+});
+ 
 
 profileRoute.get('/edit', isLoggedIn, function(req, res){
 	res.render('./profile/edit')
