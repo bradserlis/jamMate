@@ -34,36 +34,14 @@ profileRoute.get('/search', isLoggedIn, function(req, res){
 		} 
 		//made the json call into an object
 		let bodyObj = JSON.parse(body);
-		//reduce the amount of queries, by using a for in
-		//pseudo: User.find {zipcode} in bodyobj.zipcodes
-
-		//example: 
-		// User.find(
-		// 	{'zipcode:' { $in bodyObj.zip_codes}}, function(err, match){
-		// 		match.forEach(function(element){
-		// 			if(element !== []){
-		// 				matchedUsers.push(element)
-		// 			}
-		// 		})	 
-		// 	}
-		// )
-
-		bodyObj.zip_codes.forEach(function(zip){
-			zip = Number(zip);
-			User.find({zipcode: zip}, function(err, match){
-				if(err){
-					return console.log('it broke');
-				} 
-				match.forEach(function(element){
-					if(element !== []){
-						matchedUsers.push(element);
-					}
-				});
-			});
+		User.find({zipcode: {$in: bodyObj.zip_codes}})
+		.then(function(matchedUsers){
+			res.render('./profile/search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser});
+		})
+		.catch(function(err){
+			console.log('herp', err);
+			res.send(err);
 		});
-		res.render('./profile/search', {matchedUsers: matchedUsers, currentUser:res.locals.currentUser});
-			matchedUsers = [];
-
 	}); // end callback function from request call
 });
  
