@@ -1,8 +1,9 @@
 # JamMate
 
-[Try JamMate now!](https://jam-mate.herokuapp.com "JamMate")
+[Try JamMate now!](https://jam-mate.herokuapp.com 'JamMate')
 
 # Screenshots
+
 JamMate:
 ![screen shot 2018-04-30 at 12 29 32 pm](https://user-images.githubusercontent.com/36775791/39446114-37f7b28e-4c72-11e8-8ed7-d429e969d80f.png)
 
@@ -23,24 +24,22 @@ Day 3 of progress:
 
 ![day3](https://user-images.githubusercontent.com/36775791/39435947-86403ebe-4c51-11e8-83c9-144343ebc2b6.png)
 
-
 # Routes
 
-| CRUD          | Route             | Functionality                      |
-|:--------------|:------------------|:-----------------------------------|
-| GET           | /		            | Renders app homepage               |
-| GET           | /profile          | Renders user's profile             |
-| GET           | /profile/search   | calls API to retrieve list of users|
-| GET           | /profile/edit     | Renders user's edit profile view   |
-| PUT           | /profile/edit     | Updates User's Profile             |
-| DELETE        | /profile/edit     | Deletes User's Profile             |
-| GET           | /auth/signup      | Renders signup page                |
-| POST          | /auth/signup      | Creates new User                   |
-| POST          | /auth/login       | Logs User In                       |
-| GET           | /auth/logout      | Logs User Out                      |
-| GET           | /show/:id         | Renders a specifc user's profile   |
-| POST          | /show/:id         | Posts a message to a User          |
-
+| CRUD   | Route           | Functionality                       |
+| :----- | :-------------- | :---------------------------------- |
+| GET    | /               | Renders app homepage                |
+| GET    | /profile        | Renders user's profile              |
+| GET    | /profile/search | calls API to retrieve list of users |
+| GET    | /profile/edit   | Renders user's edit profile view    |
+| PUT    | /profile/edit   | Updates User's Profile              |
+| DELETE | /profile/edit   | Deletes User's Profile              |
+| GET    | /auth/signup    | Renders signup page                 |
+| POST   | /auth/signup    | Creates new User                    |
+| POST   | /auth/login     | Logs User In                        |
+| GET    | /auth/logout    | Logs User Out                       |
+| GET    | /show/:id       | Renders a specifc user's profile    |
+| POST   | /show/:id       | Posts a message to a User           |
 
 # What is it?
 
@@ -56,11 +55,10 @@ JS, HTML, CSS, Bootstrap, Response, Express, MongoDB/Mongoose, Jquery, passport,
 
 # Approach Taken
 
-Proximity of user creates search results within 15 miles of the user. This is based off of each user's profile, in which they enter their zipcode. API handles the calculation, matching all users that are within the 15 miles, and returns users. 
+Proximity of user creates search results within 15 miles of the user. This is based off of each user's profile, in which they enter their zipcode. API handles the calculation, matching all users that are within the 15 miles, and returns users.
 
 # Unsolved
 
 Search results takes two presses for the initial search.
 
-Would like to create more robust messaging within-app. Also, filtering search results of users based on instrument or genres they are interested in are works in progress and not in production at this time. 
-
+Would like to create more robust messaging within-app. Also, filtering search results of users based on instrument or genres they are interested in are works in progress and not in production at this time.

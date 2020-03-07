@@ -1,106 +1,91 @@
-.overlay{
-	position: fixed; /* Sit on top of the page content */
-/*    display: none;  Hidden by default 
-*/    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2;
-}
-
-.bg-dark{
-	background-color:#000000de!important
-}
-
 body{
 	background-image: url(/music.jpg);
-    background-size: cover;
-    height: -webkit-fill-available;
-    background-repeat: no-repeat;
-    
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
 }
 
-h1{
-	font-size: 20em;
-	position: unset;
-	color:floralwhite;
-	text-align: -webkit-center;
-	text-shadow: 0px 4px 3px rgb(255, 252, 252), 0px 8px 13px rgb(0,0,0), 0px 18px 23px rgb(255, 255, 255), 0px 4px 3px rgb(0,0,0), 0px 8px 13px rgb(0,0,0), -1px -20px 23px rgb(0,0,0);
+.overlay{
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2;
 }
 
-h3{
-  text-align: center;
-}
-h1{
-	 -webkit-animation: flickerAnimation 2s ease infinite;
-   -moz-animation: flickerAnimation 2s ease infinite;
-   -o-animation: flickerAnimation 2s ease infinite;
-    animation: flickerAnimation 2s ease infinite;
-}
+  .bg-dark{
+  	background-color:#000000de!important
+  }
 
-@keyframes titleanim {
-	from{color:white}
-	to{color:#fdfdfdad}
-}
+  .home-title{
+  	font-size: 200px;
+  	color:floralwhite;
+  	text-align: center;
+    text-shadow: 0px 4px 3px rgb(255, 252, 252), 0px 8px 13px rgb(0,0,0), 0px 18px 23px rgb(255, 255, 255), 0px 4px 3px rgb(0,0,0), 0px 8px 13px rgb(0,0,0), -1px -20px 23px rgb(0,0,0);
+    margin-top: 50px;
+  }
 
-@keyframes flickerAnimation {
-  0%   { opacity:1; }
-  50%  { opacity:0.7; }
-  100% { opacity:1; }
-}
-@-o-keyframes flickerAnimation{
-  0%   { opacity:1; }
-  50%  { opacity:0.7; }
-  100% { opacity:1; }
-}
-@-moz-keyframes flickerAnimation{
-  0%   { opacity:1; }
-  50%  { opacity:0.7; }
-  100% { opacity:1; }
-}
-@-webkit-keyframes flickerAnimation{
-  0%   { opacity:1; }
-  50%  { opacity:0.7; }
-  100% { opacity:1; }
-}
-
-@media all and (max-width:1000px){
+  .home-subtitle{
+    text-align: center;
+  }
   h1{
-    margin-top: 350px;
-    font-size: 300px;
-}
+  	 -webkit-animation: flickerAnimation 2s ease infinite;
+     -moz-animation: flickerAnimation 2s ease infinite;
+     -o-animation: flickerAnimation 2s ease infinite;
+      animation: flickerAnimation 2s ease infinite;
+  }
 
-.navbar a{
-        font-size:40px;
+  @keyframes titleanim {
+  	from{color:white}
+  	to{color:#fdfdfdad}
+  }
+
+  @keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0.7; }
+    100% { opacity:1; }
+  }
+  @-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0.7; }
+    100% { opacity:1; }
+  }
+  @-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0.7; }
+    100% { opacity:1; }
+  }
+  @-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0.7; }
+    100% { opacity:1; }
+  }
+
+@media only screen and (max-width:991.97px){
+
+    .home-title{
+      margin-top: 100px;
+      font-size: .5em;
     }
 
-span.navbar-toggler-icon{
-        font-size: 50px;
+    .navbar a{
+          font-size:25px;
     }
 
-a.navbar-brand{
-  font-size: 60px;
-}
-
-h3{
-  font-size: 45px;
-  text-shadow: 2px -7px 2px #2f2f2f, 7px 9px 2px #2f2f2f, 2px -7px 2px #2f2f2f;
-}
-}  
-    
-    body{
-
-    background-image: url(/music.jpg);
-    background-size: cover;
-    height: -webkit-fill-available;
-    background-repeat: no-repeat;
-    background-position: bottom;
-
+    span.navbar-toggler-icon{
+          font-size: 20px;
     }
-}
 
+    a.navbar-brand{
+      font-size: 30px;
+    }
 
-
+    .home-subtitle h4{
+      font-size: 45px;
+      text-shadow: 2px -7px 2px #2f2f2f, 7px 9px 2px #2f2f2f, 2px -7px 2px #2f2f2f;
+    }
+  }

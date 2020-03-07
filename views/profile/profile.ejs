@@ -1,49 +1,71 @@
 <h1>PROFILE PAGE</h1>
 
 <div>
-	<a href="/profile/edit" style="text-decoration-line: none"><button type="button" name="editButton" class="editBtn btn btn-warning">Edit Profile</button></a>
+	<a href="/profile/edit" style="text-decoration-line: none">
+		<button type="button" name="editButton" class="editBtn btn btn-warning">Edit Profile</button>
+	</a>
 
 </div>
-<h2>Hello, welcome back, <%= currentUser.name %></h2>
-	<p>Location:<%= currentUser.zipcode %> </p>
+<h2>Hello, welcome back,
+	<%= currentUser.name %>
+</h2>
+<p>Location:
+	<%= currentUser.zipcode %>
+</p>
 
 
-	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#instrumentcollapse" role="button" aria-expanded="true" class="profileA"> Instruments: <i class="fas fa-angle-double-down"></i></a>
-		 <div class="collapse" id="instrumentcollapse">
-		  <div class="card card-body">
-		<%currentUser.instruments.forEach(function(item){ %>
-		 <li><%= item %></li>
-		<% }) %>
+<ul class="profileUl">
+	<a data-toggle="collapse" aria-controls="collapseExample" href="#instrumentcollapse" role="button" aria-expanded="true" class="profileA">
+	Instruments:
+		<i class="fas fa-angle-double-down"></i>
+	</a>
+	<div class="collapse" id="instrumentcollapse">
+		<div class="card card-body">
+			<%currentUser.instruments.forEach(function(item){ %>
+				<li>
+					<%= item %>
+				</li>
+				<% }) %>
 		</div>
 	</div>
-	</ul>
-	<hr>
-	<ul class="profileUl"><a data-toggle="collapse" aria-controls="collapseExample" href="#collapseExample" role="button" aria-expanded="true" class="profileA"> Genres I Am Interested In Playing: <i class="fas fa-angle-double-down"></i></a>
-	 <div class="collapse" id="collapseExample">
-	  <div class="card card-body">
-	<%currentUser.genresToPlay.forEach(function(item){ %>
-		<li><%= item %></li>
-		<% }) %>
+</ul>
+<hr>
+<ul class="profileUl">
+	<a data-toggle="collapse" aria-controls="collapseExample" href="#collapseExample" role="button" aria-expanded="true" class="profileA">
+	Genres I Am Interested In Playing:
+		<i class="fas fa-angle-double-down"></i>
+	</a>
+	<div class="collapse" id="collapseExample">
+		<div class="card card-body">
+			<%currentUser.genresToPlay.forEach(function(item){ %>
+				<li>
+					<%= item %>
+				</li>
+				<% }) %>
+		</div>
 	</div>
-	</div>
-	</ul>
-	<hr>
+</ul>
+<hr>
 
-	<h3> Messages:</h3>
-	<% currentUser.comments.forEach(function(post){ %>
+<h3> Messages:</h3>
+<% currentUser.comments.forEach(function(post){ %>
 	<div class="row">
-       	<div class="col-md-12 commentTable">
-       		<table class='table table-striped'>
-       		<thead class="thead-dark">
-       		</thead>
-       		<tbody>
-       		<th><%= post.author%>:</th>
-       		<tr>	
-       		<td>"<%= post.message %>"</td>
-       		<td class='right'><%= post.date %></td>
-       		</tr>
-       		</tbody>
-       		</table>
-		<%}) %> 
+		<div class="col-md-12 commentTable">
+			<table class='table table-striped'>
+				<thead class="thead-dark">
+				</thead>
+				<tbody>
+					<th>
+						<%= post.author%>:</th>
+					<tr>
+						<td>"
+							<%= post.message %>"</td>
+						<td class='right'>
+							<%= post.date %>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<%}) %>
 		</div>
 	</div>

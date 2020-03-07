@@ -1,43 +1,56 @@
 <h1>Search</h1>
 
 
-<h2 id="searchName"><%= currentUser.name %></h2>
+<h2 id="searchName">
+	<%= currentUser.name %>
+</h2>
 
 
-<p>Searching 15 miles of: <%= currentUser.zipcode%></span></p>
+<p>Searching 15 miles of:
+	<%= currentUser.zipcode%>
+		</span>
+</p>
 <hr>
 <hr>
 
 <div class="row">
-<% matchedUsers.forEach(function(val){ %>
-	<div class="col-md-12 user-card col-sm-12 col-lg-3">
-		<div class='card-head'>
-			<h2><%= val.name %> </h2>	
-		</div>
+	<% matchedUsers.forEach(function(val){ %>
+		<div class="col-md-12 user-card col-sm-12 col-lg-3">
+			<div class='card-head'>
+				<h2>
+					<%= val.name %>
+				</h2>
+			</div>
 			<h3>Instruments:</h3>
-		<ul>
-			<%val.instruments.forEach(function(item){ %>
-			<li><%= item %></li>
-			<% }); %>
-		</ul>
-		<hr>
-		<h3> Genres I am Interested in:</h3> 
-		<ul>
-		<%val.genresToPlay.forEach(function(item){ %>
-			<li><%= item %></li>
-			<% }); %>
-		</ul>
-		<hr>
-		<p>Location:<%= val.zipcode %> </p>
-		<br>
-		<br>
-		<div class="col-sm-5 col-12 buttonDiv">
-            <a href="/show/<%=val._id%>"><button type="button" class="add btn btn-warning searchPage" data-id="<%=val._id %>">View Profile</button></a>
- 		</div>
-	</div>
+			<ul>
+				<%val.instruments.forEach(function(item){ %>
+					<li>
+						<%= item %>
+					</li>
+					<% }); %>
+			</ul>
+			<hr>
+			<h3> Genres I am Interested in:</h3>
+			<ul>
+				<%val.genresToPlay.forEach(function(item){ %>
+					<li>
+						<%= item %>
+					</li>
+					<% }); %>
+			</ul>
+			<hr>
+			<p>Location:
+				<%= val.zipcode %>
+			</p>
+			<br>
+			<br>
+			<div class="col-sm-5 col-12 buttonDiv">
+				<a href="/show/<%=val._id%>">
+					<button type="button" class="add btn btn-warning searchPage" data-id="<%=val._id %>">View Profile</button>
+				</a>
+			</div>
+		</div>
 
 
-<% }); %> 
+		<% }); %>
 </div>
-
-
